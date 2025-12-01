@@ -32,8 +32,12 @@
   top: 0;
   z-index: 4;
   display: block;
-  color: var(--md-primary-bg-color);
-  background-color: var(--md-primary-fg-color);
+  color: var(--md-default-fg-color);
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(6px);
+  [data-md-color-scheme="slate"] & {
+    background-color: rgba(30, 33, 41, 0.6);
+  }
   // Hack: reduce jitter by adding a transparent box shadow of the same size
   // so the size of the layer doesn't change during animation
   box-shadow:

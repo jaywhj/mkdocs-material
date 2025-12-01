@@ -26,8 +26,9 @@
 
 // Footer
 .md-footer {
-  color: var(--md-footer-fg-color);
-  background-color: var(--md-footer-bg-color);
+  color: var(--md-default-fg-color);
+  background-color: var(--md-default-bg-color);
+  border-top: 1px solid rgba(142, 142, 142, 0.1);
 
   // [print]: Hide footer
   @media print {
@@ -122,7 +123,7 @@
 
 // Footer metadata
 .md-footer-meta {
-  background-color: var(--md-footer-bg-color--dark);
+  background-color: var(--md-default-fg-color--lightest);
 
   // Footer metadata wrapper
   &__inner {
@@ -134,11 +135,11 @@
 
   // Lighten color for non-hovered text links
   html &.md-typeset a {
-    color: var(--md-footer-fg-color--light);
+    color: var(--md-default-fg-color--light);
 
     // Text link on focus/hover
     &:is(:focus, :hover) {
-      color: var(--md-footer-fg-color);
+      color: var(--md-default-fg-color);
     }
   }
 }
@@ -151,7 +152,7 @@
   padding: px2rem(8px) 0;
   margin: auto px2rem(12px);
   font-size: px2rem(12.8px);
-  color: var(--md-footer-fg-color--lighter);
+  color: var(--md-default-fg-color--lighter);
 
   // [tablet portrait +]: Show copyright and social links in one line
   @include break-from-device(tablet portrait) {
@@ -161,7 +162,7 @@
   // Footer copyright highlight - this is the upper part of the copyright and
   // theme information, which will include a darker color than the theme link
   &__highlight {
-    color: var(--md-footer-fg-color--light);
+    color: var(--md-default-fg-color--light);
   }
 }
 

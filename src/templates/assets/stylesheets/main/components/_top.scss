@@ -29,13 +29,15 @@
   position: fixed;
   top: px2rem(48px + 16px);
   z-index: 2;
-  display: block;
-  padding: px2rem(8px) px2rem(16px);
+  display: flex;
+  gap: px2rem(8px);
+  padding: px2rem(8px) px2rem(16px) px2rem(8px) px2rem(12px);
   margin-inline-start: 50%;
   font-size: px2rem(14px);
   color: var(--md-default-fg-color--light);
   cursor: pointer;
-  background-color: var(--md-default-bg-color);
+  background-color: var(--md-default-bg-color--light);
+  backdrop-filter: blur(px2rem(8px));
   border-radius: px2rem(32px);
   outline: none;
   box-shadow: var(--md-shadow-z2);
@@ -78,6 +80,14 @@
   // Inline icon
   svg {
     display: inline-block;
+    width: px2rem(18px);
+    height: px2rem(18px);
     vertical-align: -0.5em;
+
+    // Override for Lucide icons, which use strokes
+    &.lucide {
+      fill: transparent;
+      stroke: currentcolor;
+    }
   }
 }

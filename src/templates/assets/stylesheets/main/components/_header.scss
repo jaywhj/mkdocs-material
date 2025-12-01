@@ -33,16 +33,8 @@
   z-index: 4;
   display: block;
   color: var(--md-default-fg-color);
-  background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(6px);
-  [data-md-color-scheme="slate"] & {
-    background-color: rgba(30, 33, 41, 0.6);
-  }
-  // Hack: reduce jitter by adding a transparent box shadow of the same size
-  // so the size of the layer doesn't change during animation
-  box-shadow:
-    0 0           px2rem(4px) rgba(0, 0, 0, 0),
-    0 px2rem(4px) px2rem(8px) rgba(0, 0, 0, 0);
+  background-color: var(--md-default-bg-color--light);
+  backdrop-filter: blur(px2rem(8px));
 
   // [print]: Hide header
   @media print {
@@ -52,26 +44,22 @@
   // Header is hidden
   &[hidden] {
     transition:
-      transform  250ms cubic-bezier(0.8, 0, 0.6, 1),
-      box-shadow 250ms;
+      transform 250ms cubic-bezier(0.8, 0, 0.6, 1);
     transform: translateY(-100%);
   }
 
   // Header in shadow state, i.e. shadow is visible
   &--shadow {
-    box-shadow:
-      0 0           px2rem(4px) rgba(0, 0, 0, 0.1),
-      0 px2rem(4px) px2rem(8px) rgba(0, 0, 0, 0.2);
+    box-shadow: 0 px2rem(1px) 0 var(--md-default-fg-color--lightest);
     transition:
-      transform  250ms cubic-bezier(0.1, 0.7, 0.1, 1),
-      box-shadow 250ms;
+      transform 250ms cubic-bezier(0.1, 0.7, 0.1, 1);
   }
 
   // Header wrapper
   &__inner {
     display: flex;
     align-items: center;
-    padding: 0 px2rem(4px);
+    padding: 0 px2rem(8px);
   }
 
   // Header button
@@ -118,6 +106,12 @@
         width: auto;
         height: px2rem(24px);
         fill: currentcolor;
+
+        // Override for Lucide icons, which use strokes
+        &.lucide {
+          fill: transparent;
+          stroke: currentcolor;
+        }
       }
     }
 
@@ -186,9 +180,10 @@
   &__title {
     flex-grow: 1;
     height: px2rem(48px);
-    margin-inline: px2rem(20px) px2rem(8px);
+    margin-inline: px2rem(8px);
     font-size: px2rem(18px);
     line-height: px2rem(48px);
+    letter-spacing: -0.025em;
 
     // Header title in active state, i.e. page title is visible
     &--active .md-header__topic {
@@ -231,18 +226,6 @@
     flex-shrink: 0;
     max-width: 100%;
     white-space: nowrap;
-    transition:
-      max-width  0ms 250ms,
-      opacity  250ms 250ms;
-
-    // Hide toggle when search is active
-    [data-md-toggle="search"]:checked ~ .md-header & {
-      max-width: 0;
-      opacity: 0;
-      transition:
-        max-width 0ms,
-        opacity   0ms;
-    }
 
     // Hack: Firefox 117 introduces a bug where the browser scrolls the page by
     // a small amount to the top every time the header button is focused. After
@@ -260,8 +243,8 @@
     // [tablet landscape +]: Show repository information
     @include break-from-device(tablet landscape) {
       display: block;
-      width: px2rem(234px);
-      max-width: px2rem(234px);
+      width: px2rem(230px);
+      max-width: px2rem(230px);
       margin-inline-start: px2rem(20px);
     }
 
@@ -269,5 +252,11 @@
     @include break-from-device(screen) {
       margin-inline-start: px2rem(28px);
     }
+  }
+
+  // Slightly smaller icons
+  .md-icon svg {
+    width: px2rem(20px);
+    height: px2rem(20px);
   }
 }

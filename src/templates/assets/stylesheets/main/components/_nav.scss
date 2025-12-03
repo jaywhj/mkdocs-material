@@ -338,6 +338,10 @@
       &__link {
         padding: px2rem(4px) px2rem(12px);
       }
+
+      &__link--active {
+        color: var(--md-accent-fg-color);
+      }
     }
   }
 

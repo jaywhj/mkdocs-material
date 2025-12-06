@@ -327,7 +327,7 @@
         // Safari, we need to set `z-index` here as - see https://bit.ly/3s5M2jm
         z-index: 1;
         display: flex;
-        padding: px2rem(7px) px2rem(12px);
+        padding: px2rem(7px) px2rem(10px);
         margin-inline: px2rem(4px);
         font-weight: 700;
         background: var(--md-default-bg-color);
@@ -340,7 +340,7 @@
 
       // Navigation link
       &__link {
-        padding: px2rem(4px) px2rem(12px);
+        padding: px2rem(4px) px2rem(10px);
       }
 
       &__link--active {

@@ -129,7 +129,7 @@ export function watchTooltip2(
     ])
       .pipe(
         map(([focus, hover]) => focus || hover),
-        distinctUntilChanged()
+        distinctUntilChanged(),
       )
 
   // We need to determine all parent elements of the host element that are
@@ -236,8 +236,14 @@ export function mountTooltip2(
       filter(active => active),
       withLatestFrom(node$, viewport$),
       map(([_, node, { size }]) => {
+
+        // Fix horizontal offset of tooltip for repository links
         const host = el.getBoundingClientRect()
-        const x = host.width / 2
+        const originEl = el.querySelector(".md-source__repository") as HTMLElement | null
+        const offsetX = 20
+        const x = originEl
+          ? (originEl.getBoundingClientRect().left - host.left) + (originEl.getBoundingClientRect().width / 2) + offsetX
+          : host.width / 2
 
         // If the tooltip is non-interactive, we always render it below the
         // actual element because all operating systems do it that way

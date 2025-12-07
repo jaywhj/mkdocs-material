@@ -143,14 +143,14 @@ export function watchTooltip(
           if (repo) {
             const rOff = getElementOffset(repo)
             const rSize = getElementSize(repo)
-            return rOff.x - scroll.x + rSize.width / 2 - width / 2
+            return rOff.x - scroll.x + rSize.width / 2 - width / 2 + 20
           }
           return x - scroll.x + size.width / 2 - width / 2
         })()
         return {
           active,
           offset: {
-            x: xCenter + 20,
+            x: xCenter,
             y: y - scroll.y + size.height + 8
           }
         }

@@ -546,6 +546,11 @@ kbd {
     tbody tr {
       transition: background-color 125ms;
 
+      // Zebra striping
+      &:nth-of-type(even) {
+        background-color: var(--md-typeset-table-row-color);
+      }
+
       // Table row on hover
       &:hover {
         background-color: var(--md-typeset-table-color--light);

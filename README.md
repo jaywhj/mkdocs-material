@@ -42,5 +42,4 @@ For detailed installation instructions, configuration options, and a demo, visit
 **Discord**: https://discord.gg/cvTfge4AUy
 
 **Wechat**: 
-
-<img src="docs/assets/images/wechat-group.jpg" width="300" />
+<img src="docs/assets/images/wechat-group.jpg" width="150" />

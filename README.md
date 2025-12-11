@@ -4,7 +4,6 @@
 
 <p align="center">
   <img src="docs/assets/screenshots/m-sample1.png" width="700" />
-  <img src="docs/assets/screenshots/m-sample3.png" width="700" />
   <img src="docs/assets/screenshots/m-sample4.png" width="700" />
 </p>
 

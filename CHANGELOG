@@ -1,3 +1,16 @@
+
+mkdocs-materialx-10.0.3 (2025-12-11)
+
+- **New**: Added Liquid Glass theme, a modern theme identical to Zensical
+- **New**: Adjusted the maximum height of the language selection box to display more language options without scrolling
+- **New**: Added indentation guide lines to the TOC for more intuitive navigation
+- **New**: Applied the same accent color as the nav to active links in the TOC for clear progress tracking
+- **New**: Added zebra-striping to tables with support for both light and dark modes
+- **New**: Updated the `source-file.html` template example
+- **Fixed**: Tooltip in the header being blocked when `navigation.tabs.sticky` is enabled
+- **Fixed**: Misaligned (right-offset) tooltip for the repo link in the top-right corner
+- **Fixed**: Display issues on mobile devices when the maximum width of the language selection box exceeds 150px (Chrome: right side gets clipped; Safari: horizontal page scrolling occurs)
+
 mkdocs-material-9.7.0 (2025-11-11)
 
 ⚠️ Material for MkDocs is now in maintenance mode

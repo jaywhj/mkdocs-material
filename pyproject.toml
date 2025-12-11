@@ -69,9 +69,9 @@ imaging = [
 
 [project.urls]
 Documentation = "https://squidfunk.github.io/mkdocs-material/"
-Source = "https://github.com/squidfunk/mkdocs-material"
-Changelog = "https://squidfunk.github.io/mkdocs-material/changelog/"
-Issues = "https://github.com/squidfunk/mkdocs-material/issues"
+Source = "https://github.com/jaywhj/mkdocs-materialx"
+Changelog = "https://github.com/jaywhj/mkdocs-materialx/changelog/"
+Issues = "https://github.com/jaywhj/mkdocs-materialx/issues"
 
 [project.entry-points."mkdocs.plugins"]
 "materialx/blog" = "material.plugins.blog.plugin:BlogPlugin"

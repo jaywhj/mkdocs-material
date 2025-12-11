@@ -1,15 +1,15 @@
 {
   "name": "mkdocs-materialx",
-  "version": "10.0.3",
+  "version": "10.0.4",
   "description": "Documentation that simply works",
   "keywords": [
     "mkdocs",
     "documentation",
     "theme"
   ],
-  "homepage": "https://github.com/jaywhj/mkdocs-material",
+  "homepage": "https://github.com/jaywhj/mkdocs-materialx",
   "bugs": {
-    "url": "https://github.com/jaywhj/mkdocs-material/issues",
+    "url": "https://github.com/jaywhj/mkdocs-materialx/issues",
     "email": "aaronwqt@gmail.com"
   },
   "license": "MIT",
@@ -21,7 +21,7 @@
   "contributors": [],
   "repository": {
     "type": "git",
-    "url": "https://github.com/jaywhj/mkdocs-material"
+    "url": "https://github.com/jaywhj/mkdocs-materialx"
   },
   "scripts": {
     "build": "rimraf material && ts-node -T tools/build --optimize",

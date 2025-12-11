@@ -13,9 +13,9 @@ discussions, we consider our [issue tracker] and [discussion board] to serve as
 a crucial __knowledge base__ that is an important addition to our [documentation]
 and brings value to both new and experienced users of Material for MkDocs.
 
-  [discussion board]: https://github.com/squidfunk/mkdocs-material/discussions
-  [issue tracker]: https://github.com/squidfunk/mkdocs-material/issues
-  [documentation]: https://squidfunk.github.io/mkdocs-material/
+  [discussion board]: https://github.com/jaywhj/mkdocs-materialx/discussions
+  [issue tracker]: https://github.com/jaywhj/mkdocs-materialx/issues
+  [documentation]: https://github.com/jaywhj/mkdocs-materialx/
 
 ## How to contribute
 
@@ -56,7 +56,7 @@ and brings value to both new and experienced users of Material for MkDocs.
   [Report a bug]: docs/contributing/reporting-a-bug.md
   [Report a docs issue]: docs/contributing/reporting-a-docs-issue.md
   [Request a change]: docs/contributing/requesting-a-change.md
-  [Ask a question]: https://github.com/squidfunk/mkdocs-material/discussions
+  [Ask a question]: https://github.com/jaywhj/mkdocs-materialx/discussions
   [Add a translation]: docs/contributing/adding-translations.md
   [Create a pull request]: docs/contributing/making-a-pull-request.md
   
